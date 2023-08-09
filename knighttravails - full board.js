@@ -33,24 +33,25 @@ let board = checkboard()
 // this function fills in the board of how many steps it takes to reach each position..
 
 
-function node(start,end,prior = [], movecount = 0,visited = [], queuevisit = [])
+function node(start,end,prior = [], movecount = 0,visited = [], queuevisit = [], path = [])
 {
-console.log(visited,'visited')
+//console.log(visited,'visited')
 
   // start is our current node..
 //console.log(start)
 
 // if this node is equal to our end node we are done..
 if (start.toString() == end.toString()) {
-  console.log('WE ARE DONE YO', 'moves:', movecount)
+  console.log('WE ARE DONE YO', 'moves:', movecount, visited.length, path)
   board[end[0]][end[1]] = movecount
+
   return;
 }
 
 // push this node onto visited now
 visited.push(start)
 //console.log(visited)
-
+console.log(start)
 // we can set the distance to this node from wherever we came from..
 board[start[0]][start[1]] = movecount
 
@@ -76,7 +77,7 @@ if (elem.toString() == elem2.toString()) {movelist.splice(ind2,1)}
 //console.log(movelist,'aftersplice', visited)
 // perform the function again, until we reach a point 
   movelist.forEach((elem,indm,arr) => {
-    node(elem, end,prior,movecount,visited)
+    node(elem, end,prior,movecount,visited,queuevisit, path)
   })
 
 
@@ -91,7 +92,7 @@ if (elem.toString() == elem2.toString()) {movelist.splice(ind2,1)}
 
 // we have.. 
 
-console.log(board)
+//console.log(board)
 
 // this function returns an array of two element arrays of all possible moves! (could be up to 8!)
 function moves(array) {
