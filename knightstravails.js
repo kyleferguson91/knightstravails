@@ -1,4 +1,7 @@
-function knightMoves(start,end)
+
+
+
+ function knightMoves(start,end)
 
 {
 // create an info array, to hold distance from root and parent..
@@ -185,4 +188,4 @@ movelist.map((elem,ind,arr) => {
 }
 
 
-   (knightMoves([3,3], [0,0]))
+  // (knightMoves([3,3], [0,0]))
