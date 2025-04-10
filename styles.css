@@ -1,0 +1,100 @@
+body 
+{
+    margin: 0;
+    padding: 0;
+}
+
+.maincontainer
+{
+ display: flex;
+ justify-content: space-around;
+}
+.boardcontainer 
+{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.instructions
+{
+    margin-top: 2rem;
+    align-self: center;
+    justify-self: center;
+    font-size: 2rem;
+}
+
+.results 
+{
+    margin-left: 1rem;
+}
+
+.board
+{
+ 
+    border: 5px solid rgb(0, 0, 0);
+    height: 50%;
+    width: 50%;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+}
+
+.square 
+{
+
+    height: 100%;
+
+
+    width: 100%;
+
+    display: inline-block;
+}
+
+.white 
+{
+    background-color: white;
+
+}
+
+.black {
+    background-color: black;
+}
+
+.red
+{
+    background-color: red;
+}
+
+
+.green
+{
+    background-color: greenyellow;
+}
+
+.startsquare, .endsquare 
+{
+    font-weight: bold;
+}
+.startpos, .endpost
+{
+
+}
+
+.selected
+{
+    background-color: lightgreen;
+}
+.selectedblue
+{
+    background-color: lightblue;
+}
+
+.findpath
+{
+    height: 4rem;
+    width: 5rem;
+}

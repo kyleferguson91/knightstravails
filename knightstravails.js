@@ -185,4 +185,4 @@ movelist.map((elem,ind,arr) => {
 }
 
 
-//    (knightMoves([3,3], [0,0]))
+   (knightMoves([3,3], [0,0]))
