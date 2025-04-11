@@ -150,6 +150,9 @@ console.log(start, end)
             if (e.id == id)
             {
                 console.log("found a square!")
+                if (i != 0 && i != items.length - 1)
+                {    e.textContent = "Move " + (i)}
+            
                 e.classList.add("red")
             }
     }  
