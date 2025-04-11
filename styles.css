@@ -98,3 +98,48 @@ body
     height: 4rem;
     width: 5rem;
 }
+
+
+@media only screen and (max-width: 600px) {
+    .maincontainer {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .boardcontainer {
+      width: 100%;
+      height: auto;
+      padding: 1rem;
+    }
+  
+    .board {
+      width: 90vw;
+      height: 90vw; 
+      max-width: 400px;
+      max-height: 400px;
+    }
+  
+    .instructions {
+      font-size: 1.2rem;
+      text-align: center;
+      margin: 1rem;
+    }
+  
+    .results {
+      margin: 1rem 0;
+    }
+  
+    .findpath {
+      width: 100px;
+      height: 50px;
+      font-size: 1rem;
+    }
+  
+    .startsquare,
+    .endsquare {
+      font-size: 1rem;
+      text-align: center;
+    }
+  }
+  
