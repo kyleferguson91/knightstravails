@@ -102,7 +102,52 @@ if (e.target.classList.contains("square"))
         addPath()
 
         // now we can find the path!
+        let find = document.querySelector(".findpath")
 
+        find.addEventListener("click", (e) => {
+            console.log('find button clicked')
+          //  console.log("path stuff here", Array.from(startnode), Array.from(endnode))
+            let start, end;
+        
+           
+            start = startnode.toString().split('').map(Number);
+           
+            end = endnode.toString().split('').map(Number);
+        
+        console.log(start, end)
+        
+           knightMoves(start, end)
+        
+        
+           
+            for (let i = 0; i<items.length; i++)
+            {
+             
+              //  console.log("swithc id ", items[i][0], items[i][1] )
+        
+                // activate each square with a nice color to show the path, ig red..
+                let id = items[i].join('')
+        
+                let pathlist = document.querySelector(".pathlist")
+                pathlist.innerHTML += items[i] + "<br>"
+              //  console.log(id)
+                document.querySelectorAll(".square").forEach((e) => 
+        
+            {
+        
+                    if (e.id == id)
+                    {
+                        console.log("found a square!")
+                        if (i != 0 && i != items.length - 1)
+                        {    e.textContent = "Move " + (i)}
+                    
+                        e.classList.add("red")
+                    }
+            }  
+            )
+        
+            }
+        })
          
 
     }
@@ -115,52 +160,7 @@ return e.target.id
 
 function addPath()
 {
-let find = document.querySelector(".findpath")
 
-find.addEventListener("click", (e) => {
-    console.log('find button clicked')
-  //  console.log("path stuff here", Array.from(startnode), Array.from(endnode))
-    let start, end;
-
-   
-    start = startnode.toString().split('').map(Number);
-   
-    end = endnode.toString().split('').map(Number);
-
-console.log(start, end)
-
-   knightMoves(start, end)
-
-
-   
-    for (let i = 0; i<items.length; i++)
-    {
-     
-      //  console.log("swithc id ", items[i][0], items[i][1] )
-
-        // activate each square with a nice color to show the path, ig red..
-        let id = items[i].join('')
-
-        let pathlist = document.querySelector(".pathlist")
-        pathlist.innerHTML += items[i] + "<br>"
-      //  console.log(id)
-        document.querySelectorAll(".square").forEach((e) => 
-
-    {
-
-            if (e.id == id)
-            {
-                console.log("found a square!")
-                if (i != 0 && i != items.length - 1)
-                {    e.textContent = "Move " + (i)}
-            
-                e.classList.add("red")
-            }
-    }  
-    )
-
-    }
-})
 
 }
 
