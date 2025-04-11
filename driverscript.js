@@ -118,6 +118,7 @@ function addPath()
 let find = document.querySelector(".findpath")
 
 find.addEventListener("click", (e) => {
+    console.log('find button clicked')
   //  console.log("path stuff here", Array.from(startnode), Array.from(endnode))
     let start, end;
 
